@@ -75,3 +75,7 @@ def login():
             "business_unit_id": user.business_unit_id
         }
     }), 200
+
+@auth_bp.route("/ping", methods=["GET"])
+def ping():
+    return {"message": "auth alive"}
